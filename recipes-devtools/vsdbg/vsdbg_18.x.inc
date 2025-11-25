@@ -28,6 +28,13 @@ PACKAGES = "${PN}-dbg ${PN}"
 
 FILES:${PN} += "${ROOT_HOME}"
 
+do_create_spdx:prepend () {
+    pl_lic = d.getVar("LICENSE")
+    pl_no_gen = d.getVarFlag('NO_GENERIC_LICENSE', name)
+    bb.note("%s", pl_lic)
+    bb.note("%s", pl_no_gen)
+}
+
 do_install:prepend () {
 	install -d ${D}${ROOT_HOME}/.vs-debugger/vs2022/
 	install -d ${D}${ROOT_HOME}/.vs-debugger/
