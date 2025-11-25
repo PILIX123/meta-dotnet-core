@@ -6,7 +6,6 @@
 DESCRIPTION = "This does not build this version, it only pulls the binaries from Microsoft"
 BUGTRACKER = "https://visualstudio.microsoft.com/"
 SECTION = "runtime"
-LICENSE = "CLOSED"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
