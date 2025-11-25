@@ -30,7 +30,7 @@ FILES:${PN} += "${ROOT_HOME}"
 
 do_create_spdx:prepend () {
     pl_lic = d.getVar("LICENSE")
-    pl_no_gen = d.getVarFlag('NO_GENERIC_LICENSE', name)
+    pl_no_gen = d.getVarFlag('NO_GENERIC_LICENSE', "Microsoft_Software_License")
     bb.note("%s", pl_lic)
     bb.note("%s", pl_no_gen)
 }
